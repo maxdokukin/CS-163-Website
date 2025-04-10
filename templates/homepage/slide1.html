@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Value Voyage</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/top-bar-styles.css') }}">
 </head>
 <body>
 
   <!-- Top Bar: Hamburger + Inline Nav -->
   <div class="top-bar" id="topBar">
-    <div class="menu-toggle" onclick="toggleTopNav()">
+    <div class="menu-toggle" id="menuToggle" onclick="toggleTopNav()">
       <div></div>
       <div></div>
       <div></div>
@@ -18,6 +18,7 @@
       <a href="#objective">Objective</a>
       <a href="#methods">Methods</a>
       <a href="#findings">Major Findings</a>
+      <a href="#data">Data</a>
     </div>
   </div>
 
@@ -36,14 +37,14 @@
   </div>
 
   <!-- JavaScript -->
-  <script>
-    function toggleTopNav() {
-      const nav = document.getElementById("topNav");
-      const bar = document.getElementById("topBar");
-      nav.classList.toggle("open");
-      bar.classList.toggle("with-background");
-    }
-  </script>
+    <script>
+      function toggleTopNav() {
+        document.getElementById("topNav").classList.toggle("open");
+        document.getElementById("topBar").classList.toggle("with-background");
+        document.getElementById("menuToggle").classList.toggle("active");
+      }
+    </script>
+
 
 </body>
 </html>
