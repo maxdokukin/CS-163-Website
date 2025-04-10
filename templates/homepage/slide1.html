@@ -8,19 +8,21 @@
 <body>
 
   <!-- Top Bar: Hamburger + Inline Nav -->
-  <div class="top-bar" id="topBar">
-    <div class="menu-toggle" id="menuToggle" onclick="toggleTopNav()">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="top-bar" id="topBar">
+      <div class="menu-toggle" id="menuToggle" onclick="toggleTopNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="top-nav" id="topNav">
+        <a href="{{ url_for('objective') }}">Objective</a>
+        <a href="{{ url_for('methods') }}">Methods</a>
+        <a href="{{ url_for('findings') }}">Major Findings</a>
+        <a href="{{ url_for('data') }}">Data</a>
+      </div>
     </div>
-    <div class="top-nav" id="topNav">
-      <a href="#objective">Objective</a>
-      <a href="#methods">Methods</a>
-      <a href="#findings">Major Findings</a>
-      <a href="#data">Data</a>
-    </div>
-  </div>
+
+
 
   <!-- Hero Section -->
   <div class="hero">

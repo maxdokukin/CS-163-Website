@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/top-bar-styles.css') }}">
+
+<div class="top-bar" id="topBar">
+    <div class="menu-toggle" id="menuToggle" onclick="toggleTopNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="top-nav" id="topNav">
+        <a href="{{ url_for('objective') }}">Objective</a>
+        <a href="{{ url_for('findings') }}">Major Findings</a>
+        <a href="{{ url_for('data') }}">Data</a>
+    </div>
+    <div class="home-icon">
+        <a href="{{ url_for('index') }}" title="Home">🏠</a>
+    </div>
+</div>
+
+<h1>Methods Section</h1>
+
+<script>
+    function toggleTopNav() {
+        document.getElementById("topNav").classList.toggle("open");
+        document.getElementById("topBar").classList.toggle("with-background");
+        document.getElementById("menuToggle").classList.toggle("active");
+    }
+</script>

@@ -1,27 +1,24 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Line Chart Slide</title>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-<body>
-  <div class="plot-container" id="plot1"></div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-  <script>
+<div class="plot-container" id="plot1"></div>
+
+<script>
     const traceLine = {
-      x: [1900, 1920, 1940, 1960, 1980, 2000, 2020],
-      y: [1.2, 2.1, 3.5, 5.0, 6.8, 9.1, 12.4],
-      type: 'scatter',
-      mode: 'lines+markers',
-      marker: { color: 'blue' },
-      name: 'Average Price'
+        x: [1900, 1920, 1940, 1960, 1980, 2000, 2020],
+        y: [1.2, 2.1, 3.5, 5.0, 6.8, 9.1, 12.4],
+        type: 'scatter',
+        mode: 'lines+markers',
+        marker: { color: 'blue' },
+        name: 'Average Price'
     };
 
     const layoutLine = {
-      title: 'Average Price of Goods (1900–2020)',
-      xaxis: { title: 'Year' },
-      yaxis: { title: 'Price (USD)' }
+        title: 'Average Price of Goods (1900–2020)',
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Price (USD)' }
     };
 
-    Plotly.newPlot('plot1', [traceLine], layoutLine);
-  </script>
-</body>
+    const config = { responsive: true };
+
+    Plotly.newPlot('plot1', [traceLine], layoutLine, config);
+</script>

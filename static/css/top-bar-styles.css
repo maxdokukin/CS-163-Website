@@ -5,14 +5,32 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;  /* key change */
   padding: 20px;
   z-index: 1001;
   background: transparent;
   transition: background 0.3s ease;
+  min-height: 50px;
+}
+
+.home-icon {
+  margin-right: 45px;
+}
+
+.home-icon a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.home-icon a:hover {
+  opacity: 1;
 }
 
 .top-bar.with-background {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Hamburger */
@@ -22,6 +40,7 @@
   cursor: pointer;
   position: relative;
   z-index: 1002;
+  margin-left: 5px;
 }
 
 .menu-toggle div {
@@ -45,7 +64,7 @@
   bottom: 0;
 }
 
-/* Animate to X */
+/* Hamburger transforms into X */
 .menu-toggle.active div:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
@@ -58,13 +77,12 @@
   transform: translateY(-10px) rotate(-45deg);
 }
 
-
-/* Top nav (full width when open) */
+/* Top nav layout */
 .top-nav {
   display: none;
   flex-grow: 1;
   margin-left: 20px;
-  margin-right: 40px;
+  margin-right: 20px;
   justify-content: space-around;
 }
 
@@ -72,6 +90,7 @@
   display: flex;
 }
 
+/* Top nav links */
 .top-nav a {
   flex: 1;
   display: flex;
@@ -86,11 +105,10 @@
   letter-spacing: 0.5px;
   opacity: 0.95;
   padding: 0 10px;
-  white-space: normal;  /* allows wrapping */
+  white-space: normal;
   line-height: 1.2;
   transition: opacity 0.2s ease, text-shadow 0.2s ease;
 }
-
 
 .top-nav a:hover {
   opacity: 1;
@@ -98,8 +116,3 @@
   text-decoration: underline;
 }
 
-
-.top-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
