@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap');
+
 html, body {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
 }
 
 .container {
@@ -18,11 +21,12 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*padding: 20px;*/
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
 }
 
-/* Alternate background colors for clarity */
 .section:nth-child(odd) {
   background-color: #f0f0f0;
 }
@@ -31,16 +35,90 @@ html, body {
   background-color: #e0e0e0;
 }
 
-/* Optional: Add a fade-in animation to sections */
-.section {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s forwards;
-}
-
 @keyframes fadeIn {
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("/static/images/main_image.jpeg") center center / cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.overlay-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay-footer {
+  margin-top: auto;
+  padding-bottom: 1rem;
+}
+
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem; /* increased from 4rem */
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2.25rem; /* increased from 1.75rem */
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }    /* increased from 2.5rem */
+  h2 { font-size: 1.5rem; }  /* increased from 1.25rem */
+  h3 { font-size: 1.25rem; }
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0.8;
+  animation: bounce 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+
