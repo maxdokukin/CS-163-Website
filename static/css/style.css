@@ -122,8 +122,82 @@ h3 {
 }
 
 
-#plot {
+.plot-container {
   width: 90%;
   height: auto;
   min-height: 90%;
+  margin: auto;
+}
+
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  z-index: 1001;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.top-bar.with-background {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Hamburger */
+.menu-toggle {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1002;
+}
+
+.menu-toggle div {
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Top nav (full width when open) */
+.top-nav {
+  display: none;
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 40px;
+  justify-content: space-around;
+}
+
+.top-nav.open {
+  display: flex;
+}
+
+.top-nav a {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;             /* make text bold */
+  font-size: 1.1rem;            /* slightly larger */
+  text-transform: uppercase;   /* optional: all caps */
+  letter-spacing: 0.5px;       /* optional: spacing for emphasis */
+  opacity: 0.95;
+  transition: opacity 0.2s ease, text-shadow 0.2s ease;
+}
+
+.top-nav a:hover {
+  opacity: 1;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+}
+
+
+.top-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }

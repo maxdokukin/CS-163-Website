@@ -6,6 +6,22 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+
+  <!-- Top Bar: Hamburger + Inline Nav -->
+  <div class="top-bar" id="topBar">
+    <div class="menu-toggle" onclick="toggleTopNav()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="top-nav" id="topNav">
+      <a href="#objective">Objective</a>
+      <a href="#methods">Methods</a>
+      <a href="#findings">Major Findings</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
   <div class="hero">
     <div class="overlay">
       <div class="overlay-content">
@@ -16,7 +32,18 @@
         <h3>by Max Dokukin and Ryan Fernald</h3>
       </div>
     </div>
-      <div class="scroll-hint">↓</div>
+    <div class="scroll-hint">↓</div>
   </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleTopNav() {
+      const nav = document.getElementById("topNav");
+      const bar = document.getElementById("topBar");
+      nav.classList.toggle("open");
+      bar.classList.toggle("with-background");
+    }
+  </script>
+
 </body>
 </html>
