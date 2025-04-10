@@ -7,18 +7,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage-styles.css') }}">
 </head>
 <body>
-
     <div class="container">
-        <div class="section">{% include 'homepage/slide1.html' %}</div>
-        <div class="section">{% include 'homepage/slide2.html' %}</div>
-        <div class="section">{% include 'homepage/slide3.html' %}</div>
-        <div class="section">{% include 'homepage/slide4.html' %}</div>
-        <div class="section">{% include 'homepage/slide5.html' %}</div>
-        <div class="section">{% include 'homepage/slide6.html' %}</div>
-        <div class="section">{% include 'homepage/slide7.html' %}</div>
+        {% for slide in slides %}
+            <div class="section">{% include slide %}</div>
+        {% endfor %}
     </div>
-
-    <!-- JavaScript for Scroll-triggered Animation -->
     <script src="{{ url_for('static', filename='js/scroll-activate.js') }}"></script>
 </body>
 </html>

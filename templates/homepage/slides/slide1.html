@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Value Voyage</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/top-bar-styles.css') }}">
+    </head>
+    <body>
+        <!-- Top Bar: Hamburger + Inline Nav -->
+        <div class="top-bar" id="topBar">
+            <div class="menu-toggle" id="menuToggle" onclick="toggleTopNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="top-nav" id="topNav">
+                <a href="/sections/objective">Objective</a>
+                <a href="/sections/methods">Methods</a>
+                <a href="/sections/findings">Major Findings</a>
+                <a href="/sections/data">Data</a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h1>Value Voyage</h1>
+                    <h2>A journey through decades of prices</h2>
+                </div>
+                <div class="overlay-footer">
+                    <h3>by Max Dokukin and Ryan Fernald</h3>
+                </div>
+            </div>
+            <div class="scroll-hint">↓</div>
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            function toggleTopNav() {
+                document.getElementById("topNav").classList.toggle("open");
+                document.getElementById("topBar").classList.toggle("with-background");
+                document.getElementById("menuToggle").classList.toggle("active");
+            }
+        </script>
+    </body>
+</html>

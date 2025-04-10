@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="section">{% include 'sections/data/slide1.html' %}</div>
+        {% for slide in slides %}
+            <div class="section">{% include slide %}</div>
+        {% endfor %}
     </div>
 
     <script src="{{ url_for('static', filename='js/scroll-activate.js') }}"></script>

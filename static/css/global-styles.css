@@ -62,10 +62,15 @@ h3 {
   opacity: 0.85;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
   h1 { font-size: 3rem; }    /* increased from 2.5rem */
   h2 { font-size: 1.5rem; }  /* increased from 1.25rem */
   h3 { font-size: 1.25rem; }
+  p { font-size: 1rem; }
 }
 
 .plot-container {
