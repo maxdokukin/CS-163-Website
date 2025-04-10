@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Value Voyage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url("{{ url_for('static', filename='images/main_image.webp') }}") center center / cover no-repeat;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="overlay">
+      <h1>Value Voyage</h1>
+      <h2>A journey through decades of prices.</h2>
+      <p>by Max Dokukin and Ryan Fernald</p>
+    </div>
+  </div>
+</body>
+</html>
