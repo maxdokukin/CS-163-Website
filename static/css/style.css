@@ -28,11 +28,11 @@ html, body {
 }
 
 .section:nth-child(odd) {
-  background-color: #f0f0f0;
+  background-color: #777;
 }
 
 .section:nth-child(even) {
-  background-color: #e0e0e0;
+  background-color: #555;
 }
 
 @keyframes fadeIn {
@@ -122,3 +122,8 @@ h3 {
 }
 
 
+#plot {
+  width: 90%;
+  height: auto;
+  min-height: 90%;
+}
