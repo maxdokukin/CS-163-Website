@@ -8,6 +8,20 @@
 </head>
 <body>
     <div class="container">
+            <div class="top-bar" id="topBar">
+            <div class="menu-toggle" id="menuToggle" onclick="toggleTopNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="top-nav" id="topNav">
+                <a href="/sections/objective">Objective</a>
+                <a href="/sections/methods">Methods</a>
+                <a href="/sections/findings">Major Findings</a>
+                <a href="/sections/data">Data</a>
+            </div>
+        </div>
+
         {% for slide in slides %}
             <div class="section">{% include slide %}</div>
         {% endfor %}
